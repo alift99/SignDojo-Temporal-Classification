@@ -49,7 +49,7 @@ class TrailImageDataset(Dataset):
         image_path = f'{self.root}/{label}/{filename}'
         
         # Open the image using PIL and convert to B&W
-        image = Image.open(image_path).convert('L').transpose(Image.FLIP_LEFT_RIGHT)
+        image = Image.open(image_path).convert('L')
         
         # Convert image to a torch tensor and normalize
         X = self.transform(image)

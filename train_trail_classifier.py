@@ -12,7 +12,7 @@ def get_trail_classifier():
     # Load final TRAIL classifier
     model = CNN()
     model.fc2 = nn.Linear(64, 3)
-    state_dict = torch.load('models/final_trail_model_2.pth')
+    state_dict = torch.load('models/final_trail_model.pth')
     model.load_state_dict(state_dict)
     return model
 
